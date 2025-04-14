@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 
 const app = new Hono()
 
-const BOT_TOKEN = "7877026107:AAFixdFlw39MARmGbQkWnaGM93O7WT7ZQ-8";
+const BOT_TOKEN = process.env.BOT_TOKEN;
 
 app.post('/webhook', async (c) => {
   const body = await c.req.json();
